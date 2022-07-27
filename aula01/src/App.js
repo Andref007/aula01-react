@@ -1,25 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { ModalTemplate } from './components/modalTemplate';
 
 import Button from 'react-bootstrap/Button';
+import { useState } from 'react';
 
 function App() {
+
+  const [livro, setLivro] = useState({nome: 'O mundo de Sofia', autor: 'Jostein Gaarder'})
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Meu primeiro projeto React - André
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ModalTemplate data ={livro} />
+
     </div>
   );
 }
